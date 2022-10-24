@@ -11,7 +11,7 @@ int main(void) {
 	stop = clock();
 
 	duration = (double)(stop - start) / CLOCKS_PER_SEC;
-	printf("blank.\n", duration);
+	printf("수행시간은 %f초입니다.\n", duration);
 
 	return 0;
 }
