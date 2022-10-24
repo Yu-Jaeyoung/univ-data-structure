@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 
 int factorial(int n);
@@ -9,4 +10,4 @@ int main(void)
 	printf("factorial is %d\n", factorial_iter(3));
 
 	return 0;
-}
+}*/
