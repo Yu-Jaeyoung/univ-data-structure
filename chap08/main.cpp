@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 
 #include "binarytree.h"
@@ -45,4 +46,4 @@ int main(void) {
     }
 
     return 0;
-}
+}*/

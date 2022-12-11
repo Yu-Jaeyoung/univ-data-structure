@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include "binarytree.h"
 
@@ -30,4 +31,4 @@ TreeNode *isearch(TreeNode *root, int key) {
     }
 
     return NULL;
-}
+}*/

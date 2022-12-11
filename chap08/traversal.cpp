@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include "binarytree.h"
 
@@ -61,6 +62,7 @@ void inorder_iter(TreeNode *root) {
             push(root);
 
         root = pop();
+
         if (!root)
             break;
 
@@ -69,3 +71,4 @@ void inorder_iter(TreeNode *root) {
         root = root->right;
     }
 }
+*/

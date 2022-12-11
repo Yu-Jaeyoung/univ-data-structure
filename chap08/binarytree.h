@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 typedef struct _TreeNode {
@@ -18,4 +19,4 @@ void inorder_iter(TreeNode *root);
 
 TreeNode *search(TreeNode *root, int key);
 
-TreeNode *isearch(TreeNode *root, int key);
+TreeNode *isearch(TreeNode *root, int key);*/

@@ -9,4 +9,5 @@ add_executable(chap08
         binarysearchtree.cpp
         binarytree.h
         main.cpp
-        traversal.cpp)
+        traversal.cpp
+        thread_traversal.cpp)
