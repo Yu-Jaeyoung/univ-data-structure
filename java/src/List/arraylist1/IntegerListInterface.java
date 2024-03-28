@@ -1,4 +1,4 @@
-package arraylist1;
+package List.arraylist1;
 
 public interface IntegerListInterface {
     public void add(int i, Integer x);
