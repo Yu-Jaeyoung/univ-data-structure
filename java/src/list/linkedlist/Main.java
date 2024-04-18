@@ -1,9 +1,8 @@
-package List.linkedlist_generic;
-
+package list.linkedlist;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new LinkedList<>();
+        IntegerLinkedList linkedList = new IntegerLinkedList();
 
         linkedList.add(0, 5);
         linkedList.add(1, 8);

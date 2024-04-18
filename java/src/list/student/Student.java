@@ -1,4 +1,4 @@
-package List.student;
+package list.student;
 
 public class Student {
     private String name;

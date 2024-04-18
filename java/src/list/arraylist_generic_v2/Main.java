@@ -1,4 +1,4 @@
-package List.arraylist_generic_v2;
+package list.arraylist_generic_v2;
 
 public class Main {
     public static void main(String[] args) {

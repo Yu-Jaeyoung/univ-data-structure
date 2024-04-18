@@ -1,6 +1,6 @@
-package List.linkedlist_generic;
+package list.linkedlist_generic;
 
-import List.common.ListInterface;
+import list.common.ListInterface;
 
 public class LinkedList<E> implements ListInterface<E> {
 

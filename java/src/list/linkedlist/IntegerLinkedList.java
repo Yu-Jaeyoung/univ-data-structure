@@ -1,4 +1,4 @@
-package List.linkedlist;
+package list.linkedlist;
 
 public class IntegerLinkedList implements IntegerListInterface {
 

@@ -1,7 +1,7 @@
-package List.student;
+package list.student;
 
-import List.common.ListInterface;
-import List.linkedlist_generic.LinkedList;
+import list.common.ListInterface;
+import list.linkedlist_generic.LinkedList;
 
 public class Main {
     public static void main(String[] args) {

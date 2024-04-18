@@ -1,4 +1,4 @@
-package List.linkedlist;
+package list.linkedlist;
 
 public interface IntegerListInterface {
     public void add(int k, Integer x);

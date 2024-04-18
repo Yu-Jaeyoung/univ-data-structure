@@ -1,4 +1,4 @@
-package List.arraylist_generic_v2;
+package list.arraylist_generic_v2;
 
 public interface ListInterface<E> {
     public void add(int i, E x);

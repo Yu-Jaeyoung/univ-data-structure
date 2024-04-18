@@ -1,4 +1,4 @@
-package List.arraylist1;
+package list.arraylist;
 
 public class IntegerArrayList implements IntegerListInterface {
 

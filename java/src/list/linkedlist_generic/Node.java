@@ -1,4 +1,4 @@
-package List.linkedlist_generic;
+package list.linkedlist_generic;
 
 public class Node<E> {
 

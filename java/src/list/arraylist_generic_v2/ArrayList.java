@@ -1,12 +1,13 @@
-package List.arraylist_generic_v1;
+package list.arraylist_generic_v2;
 
-public class ArrayList<E> {
+public class ArrayList<E> implements ListInterface<E> {
     private static final int DEFAULT_CAPACITY = 64;
 
     private E[] items;
     private int numItems;
 
     // 작성자가 제네릭 E로 캐스팅되는 것을 보장
+    // 일반적으로는 사용하지 않는것이 좋음
     @SuppressWarnings("unchecked")
     public ArrayList() {
         this.items = (E[]) new Object[DEFAULT_CAPACITY];
@@ -19,13 +20,16 @@ public class ArrayList<E> {
         this.numItems = 0;
     }
 
+    @Override
     public void add(final int k, final E x) {
 
         // 배열의 중간은 비우지 않는다.
-        if (numItems >= items.length || k < 0 || k > numItems) {
-            /* 에러 처리 */
-            System.out.println("용량을 초과했거나, 인덱스가 잘못되었습니다.");
+        if (k < 0 || k > numItems) {
             return;
+        }
+
+        if (numItems >= items.length) {
+            increaseCapacity();
         }
 
         for (int i = numItems - 1; i >= k; i--) {
@@ -37,15 +41,27 @@ public class ArrayList<E> {
 
     }
 
+    private void increaseCapacity() {
+
+        E[] newItems = (E[]) new Object[items.length * 2];
+
+        for (int i = 0; i < numItems; i++) {
+            newItems[i] = items[i];
+        }
+
+        this.items = newItems;
+    }
+
+    @Override
     public void append(final E x) {
         if (numItems >= items.length) {
-            System.out.println("용량이 초과되었습니다.");
-            return;
+            increaseCapacity();
         }
 
         items[numItems++] = x;
     }
 
+    @Override
     public E remove(final int k) {
         if (isEmpty() || k < 0 || k > numItems - 1) {
             System.out.println("리스트가 비었거나, 인덱스가 잘못되었습니다.");
@@ -63,6 +79,7 @@ public class ArrayList<E> {
         return tmp;
     }
 
+    @Override
     public boolean removeItem(final E x) {
 
         int k = 0;
@@ -84,6 +101,7 @@ public class ArrayList<E> {
         return true;
     }
 
+    @Override
     public E get(final int k) {
         if (k >= 0 && k <= numItems - 1) {
             return items[k];
@@ -92,6 +110,7 @@ public class ArrayList<E> {
         }
     }
 
+    @Override
     public void set(final int k, final E x) {
         if (k >= 0 && k <= numItems - 1) {
             items[k] = x;
@@ -100,6 +119,7 @@ public class ArrayList<E> {
         }
     }
 
+    @Override
     public int indexOf(final E x) {
 
         int i = 0;
@@ -115,18 +135,22 @@ public class ArrayList<E> {
         return i;
     }
 
+    @Override
     public int size() {
         return numItems;
     }
 
+    @Override
     public boolean isEmpty() {
         return numItems == 0;
     }
 
+    @Override
     public void clear() {
         numItems = 0;
     }
 
+    @Override
     public void printAll() {
         for (int i = 0; i < numItems; i++) {
             System.out.println(items[i]);

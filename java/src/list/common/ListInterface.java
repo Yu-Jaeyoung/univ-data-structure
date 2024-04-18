@@ -1,4 +1,4 @@
-package List.common;
+package list.common;
 
 public interface ListInterface<E> {
     public void add(int k, E x);
