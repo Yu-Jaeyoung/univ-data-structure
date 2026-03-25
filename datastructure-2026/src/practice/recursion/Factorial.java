@@ -4,8 +4,7 @@ public class Factorial {
     static int fact_iter(int n) {
         int result = 1;
 
-        for (int i = 1; i < n; i++) {
-
+        for (int i = 1; i <= n; i++) {
             result *= i;
         }
 
@@ -22,8 +21,8 @@ public class Factorial {
         return n * fact_rec(n - 1);
     }
 
-    static void main() {
-        System.out.println(fact_iter(4));
+    public static void main(String[] args) {
+        System.out.println(fact_iter(3));
         System.out.println(fact_rec(3));
     }
 }
