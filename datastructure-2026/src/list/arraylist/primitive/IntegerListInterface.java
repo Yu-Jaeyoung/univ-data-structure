@@ -1,4 +1,4 @@
-package list.arraylist;
+package list.arraylist.primitive;
 
 public interface IntegerListInterface {
     public void add(final int k, final Integer x);

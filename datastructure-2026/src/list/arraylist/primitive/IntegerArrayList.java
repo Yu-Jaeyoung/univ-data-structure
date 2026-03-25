@@ -1,4 +1,4 @@
-package list.arraylist;
+package list.arraylist.primitive;
 
 public class IntegerArrayList implements IntegerListInterface {
     private Integer[] items;
@@ -89,8 +89,7 @@ public class IntegerArrayList implements IntegerListInterface {
 
     @Override
     public void set(int k, Integer x) {
-        // 만약에 append 개념으로 한다면 numItem++도 처리해야되서 ... > 로 하는게 ?
-        if (k < 0 || k > numItems) {
+        if (k < 0 || k > numItems - 1) {
             return;
         }
 

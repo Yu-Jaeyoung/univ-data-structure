@@ -1,4 +1,4 @@
-package list.arraylist;
+package list.arraylist.primitive;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,10 +24,5 @@ public class Main {
 
         list.clear();
         list.printAll();
-
-//        boolean result1 = list.removeItem(400);
-//        boolean result2 = list.removeItem(300);
-//        System.out.println(result1 + ", " + result2);
-//        list.printAll();
     }
 }
