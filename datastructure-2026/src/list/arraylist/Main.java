@@ -13,9 +13,21 @@ public class Main {
         System.out.println(removeItem);
         list.printAll();
 
-        boolean result1 = list.removeItem(400);
-        boolean result2 = list.removeItem(300);
-        System.out.println(result1 + ", " + result2);
+        Integer getItem = list.get(2);
+        System.out.println(getItem);
+
+        int index = list.indexOf(500);
+        System.out.println(index);
+
+        list.set(3, 100);
         list.printAll();
+
+        list.clear();
+        list.printAll();
+
+//        boolean result1 = list.removeItem(400);
+//        boolean result2 = list.removeItem(300);
+//        System.out.println(result1 + ", " + result2);
+//        list.printAll();
     }
 }

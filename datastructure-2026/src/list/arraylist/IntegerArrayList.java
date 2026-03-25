@@ -79,33 +79,52 @@ public class IntegerArrayList implements IntegerListInterface {
     }
 
     @Override
-    public Integer get(int i) {
-        return 0;
+    public Integer get(int k) {
+        if (k < 0 || k > numItems - 1) {
+            return null;
+        }
+
+        return items[k];
     }
 
     @Override
-    public void set(int i, Integer x) {
+    public void set(int k, Integer x) {
+        // 만약에 append 개념으로 한다면 numItem++도 처리해야되서 ... > 로 하는게 ?
+        if (k < 0 || k > numItems) {
+            return;
+        }
 
+        items[k] = x;
     }
 
     @Override
     public int indexOf(Integer x) {
-        return 0;
+        int k = 0;
+
+        while (k < numItems && !items[k].equals(x)) {
+            k++;
+        }
+
+        if (k == numItems) {
+            return -1;
+        }
+
+        return k;
     }
 
     @Override
     public int size() {
-        return 0;
+        return numItems;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return numItems == 0;
     }
 
     @Override
     public void clear() {
-
+        numItems = 0;
     }
 
     @Override
