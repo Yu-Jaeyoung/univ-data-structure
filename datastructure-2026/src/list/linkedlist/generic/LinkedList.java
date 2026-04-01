@@ -6,6 +6,7 @@ public class LinkedList<E> implements ListInterface<E> {
 
     private int numItems;
     private Node<E> head;
+    private Node<E> tail;
 
     public LinkedList() {
         this.numItems = 0;
@@ -31,19 +32,30 @@ public class LinkedList<E> implements ListInterface<E> {
         }
 
         Node<E> prevNode = getNode(k - 1);
-        prevNode.next = new Node<>(x, prevNode.next);
+        Node<E> newNode = new Node<>(x, prevNode.next);
+        prevNode.next = newNode;
+
+        if (k == numItems) {
+            tail = newNode;
+        }
+
         numItems++;
     }
 
     @Override
     public void append(final E x) {
-        Node<E> prevNode = head;
+//        Node<E> prevNode = head;
+//
+//        while (prevNode.next != null) {
+//            prevNode = prevNode.next;
+//        }
 
-        while (prevNode.next != null) {
-            prevNode = prevNode.next;
-        }
+        Node<E> prevNode = tail;
+        Node<E> newNode = new Node<>(x, null);
 
-        prevNode.next = new Node<>(x, null);
+        prevNode.next = newNode;
+        tail = newNode;
+
         numItems++;
     }
 
