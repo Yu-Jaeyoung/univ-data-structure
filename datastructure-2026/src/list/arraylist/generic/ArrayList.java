@@ -1,5 +1,7 @@
 package list.arraylist.generic;
 
+import list.common.ListInterface;
+
 public class ArrayList<E> implements ListInterface<E> {
     private E[] items;
     private int numItems;
@@ -10,14 +12,19 @@ public class ArrayList<E> implements ListInterface<E> {
         this.numItems = 0;
     }
 
+    public ArrayList(final int n) {
+        this.items = (E[]) new Object[n];
+        this.numItems = 0;
+    }
+
     @Override
     public void add(final int k, final E x) {
         if (numItems >= items.length) {
-            return;
+            throw new RuntimeException("Array Length Exceed");
         }
 
         if (k < 0 || k > numItems) {
-            return;
+            throw new RuntimeException("Wrong Index");
         }
 
         for (int i = numItems - 1; i >= k; i--) {
@@ -30,7 +37,7 @@ public class ArrayList<E> implements ListInterface<E> {
     @Override
     public void append(final E x) {
         if (numItems >= items.length) {
-            return;
+            throw new RuntimeException("Array Length Exceed");
         }
 
         items[numItems++] = x;
@@ -137,5 +144,10 @@ public class ArrayList<E> implements ListInterface<E> {
                 System.out.print(items[i] + ", ");
             }
         }
+    }
+
+    @Override
+    public void printAll(String delimiter) {
+        // TODO: need to implement method.
     }
 }

@@ -1,4 +1,4 @@
-package list.arraylist.generic;
+package list.common;
 
 public interface ListInterface<E> {
     public void add(final int k, final E x);
@@ -22,4 +22,6 @@ public interface ListInterface<E> {
     public void clear();
 
     public void printAll();
+
+    public void printAll(final String delimiter);
 }

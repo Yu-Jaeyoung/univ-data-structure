@@ -1,8 +1,8 @@
-package list.arraylist.generic;
+package list.linkedlist.generic;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>(3);
+        LinkedList<String> list = new LinkedList<>();
 
         try {
             list.add(0, "300");
@@ -15,17 +15,18 @@ public class Main {
 
         list.printAll();
 
+
         String removeItem = list.remove(2);
         System.out.println(removeItem);
         list.printAll();
 
-        String getItem = list.get(1);
+        String getItem = list.get(2);
         System.out.println(getItem);
 
         int index = list.indexOf("500");
         System.out.println(index);
 
-        list.set(1, "100");
+        list.set(2, "100");
         list.printAll();
 
         list.clear();
